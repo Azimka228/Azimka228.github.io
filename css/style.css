@@ -1,0 +1,226 @@
+*{
+    margin:0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+html,body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Lato',sans-serif;
+}
+
+/* header*/
+
+.header {
+    height: 89px;
+    background-color: #2D303A;
+    border-bottom: 5px solid #323746;
+}
+.header_wrapper {
+    align-items: center;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.header_container {
+    display: flex;
+    max-width: 1020px;
+    height: 94px;
+    position: relative;
+    margin: 0 auto;
+}
+.header_logo {
+    display: flex;
+    position: absolute;
+    width: 124px;
+    height: 25px;
+    left: 40px;
+    top: 29px;
+   
+}
+.header_logo h1:first-child {
+    color: #FFFFFF;
+    font-family: 'Lato',sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: -0.03em;
+}
+
+.header_logo h1:last-child {
+    color: #F06C64;
+    font-family: 'Lato',sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: -0.03em;
+}
+.header_logo h1:hover {
+    cursor: default;
+}
+.header_nav {
+    display: flex; 
+    position: absolute;
+    width: 375px;
+    height: 14px;
+    left: 602px;
+    top: 42px;
+    
+}
+.header_nav ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    
+    
+}
+.header_nav ul>li>a {
+    color:#FFFFFF;
+}
+.header_nav ul>li>a:hover {
+    color: #F06C64;
+    transition: 0.5s;
+}
+.header_nav ul li {
+    position: relative;
+    font-family: 'Lato',sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    word-spacing: 15px;
+    letter-spacing: -0.035em;
+}
+.header_nav ul li:not(:last-child)::after {
+    content: "·";
+    font-size: 12px;
+    line-height: 14px;
+    margin-left: 15px;
+    color:#FFFFFF;
+}
+
+
+
+/* header*/
+
+
+/*main*/
+
+
+.main {
+    background-color: #F06C64;
+    height: 594px;
+    border-bottom: 6px solid #EA676B;
+}
+
+.main_container {
+    display: flex;
+    max-width: 1020px;
+    height: 594px;
+    position: relative;
+    margin: 0 auto;
+}
+.main_slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 940px;
+    margin: 0 auto;
+}
+a.left_slider {
+    position: absolute;
+    height: 594px;
+    width: 75px;
+}
+a.right_slider {
+    position: absolute;
+    height: 594px;
+    width: 75px;
+    left: 905px;
+}
+
+/*main*/
+
+.services {
+    background-color: #F2F2F2;
+    height: 494px;
+    border-bottom: 6px solid #FFFFFF;
+}
+.services__wrapper {
+    width: 1020px;
+    margin: 0 auto;
+}
+.services__wrapper__inner {
+    align-items: center;
+    width: 940px;
+    margin: 0 auto;
+}
+.services__title {
+    display: flex;
+    width: 936px;
+    height: 220px;
+    flex-direction: column;
+}
+.services__title__name {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 36px;
+    margin-top: 59px;
+    margin-bottom: 18px;
+    color: #666D89;
+}
+.services__title__desc {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 60px; 
+    color: #767E9E;
+}
+.services__container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 940px;
+    height: 228px;
+}
+.services__element {
+    display: flex;
+    width: 300px;
+    height: 104px;
+}
+.services__element:nth-child(2),
+.services__element:nth-child(5)
+{
+    display: flex;
+    width: 300px;
+    height: 104px;
+    margin-left:20px;
+    margin-right:20px;
+}
+.services__avatar {
+    width: 80px;
+}
+.services__description {
+    width: 220px;
+}
+.services__desc__title {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 18px;
+    color: #666D89;
+}
+.services__desc__text {
+    margin-top: 7px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 22px;
+    text-align: justify;
+    color: #767E9E;
+}
