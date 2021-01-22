@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header" id="home">
     <div class="header_wrapper">
       <div class="header_container">
         <div class="header_logo">
@@ -19,11 +19,11 @@
         </div>
         <nav class="header_nav">
           <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">SERVICES</a></li>
-            <li><a href="#">PORTFOLIO</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">CONTACT</a></li>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#contact">CONTACT</a></li>
           </ul>
         </nav>
       </div>
@@ -42,7 +42,7 @@
       </div>
     </div>
   </main>
-  <section>
+  <section id="services">
     <div class="services">
       <div class="wrapper">
         <div class="wrapper__inner">
@@ -120,59 +120,143 @@
       </div>
     </div>
   </section>
-  <section>
+  <section id="portfolio">
     <div class="porfolio">
       <div class="wrapper">
-        <div class="wrapper__inner">
-          <div class="portfolio_title">
-            <h1>Portfolio</h1>
-            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+        <div class="portfolio_title">
+          <h1>Portfolio</h1>
+          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+        </div>
+        <div class="portfolio_nav">
+          <ul>
+            <li><a href="#" class="active__portfolio">All</a></li>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Graphic Design</a></li>
+            <li><a href="#">Artwork</a></li>
+          </ul>
+        </div>
+        <div class="portfolio__content">
+          <div class="portfolio__element">
+            <div class="avatar">
+              <img src="image/portfolio-1.svg" alt="">
+            </div>
+            <div class="avatar">
+              <img src="image/portfolio-2.svg" alt="">
+            </div>
+            <div class="avatar">
+              <img src="image/portfolio-3.svg" alt="">
+            </div>
+            <div>
+              <img src="image/portfolio-4.svg" alt="">
+            </div>
+            <div class="avatar">
+              <img src="image/portfolio-5.svg" alt="">
+            </div>
+            <div class="avatar">
+              <img src="image/portfolio-6.svg" alt="">
+            </div>
+            <div class="avatar">
+              <img src="image/portfolio-7.svg" alt="">
+            </div>
+            <div>
+              <img src="image/portfolio-8.svg" alt="">
+            </div>
+            <div class="avatar">
+              <img src="image/portfolio-9.svg" alt="">
+            </div>
+            <div class="avatar">
+              <img src="image/portfolio-10.svg" alt="">
+            </div>
+            <div class="avatar">
+              <img src="image/portfolio-11.svg" alt="">
+            </div>
+            <div>
+              <img src="image/portfolio-12.svg" alt="">
+            </div>
           </div>
-          <div class="portfolio_nav">
-            <ul>
-              <li><a href="#" class="active__portfolio">All</a></li>
-              <li><a href="#">Web Design</a></li>
-              <li><a href="#">Graphic Design</a></li>
-              <li><a href="#">Artwork</a></li>
-            </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <div class="about">
+      <div class="wrapper">
+        <div class="about_title">
+          <h1>About Us</h1>
+          <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi
+            erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor
+            mauris condimentum nibh.</p>
+        </div>
+        <div class="about_profiles">
+          <div class="profile">
+            <div class="profile_photo">
+              <img src="image/photo-1.svg" alt="">
+            </div>
+            <div class="profile_text">
+              <h3>Adam Jensen</h3>
+              <p>Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id
+                lorem.</p>
+            </div>
+            <div class="profile_social">
+              <div class="profile_social_avatar">
+                <a href=""><img src="image/ico-facebook.svg" alt=""></a>
+              </div>
+              <div class="profile_social_avatar">
+                <a href=""><img src="image/ico-google-plus.svg" alt=""></a>
+              </div>
+              <div class="profile_social_avatar">
+                <a href=""><img src="image/ico-twitter.svg" alt=""></a>
+              </div>
+              <div class="profile_social_avatar">
+                <a href=""><img src="image/ico-linkedin.svg" alt=""></a>
+              </div>
+            </div>
           </div>
-          <div class="portfolio__content">
-            <div class="portfolio__element">
-              <div class="avatar">
-                <img src="image/portfolio-1.svg" alt="">
+          <div class="profile">
+            <div class="profile_photo">
+              <img src="image/photo-2.svg" alt="">
+            </div>
+            <div class="profile_text">
+              <h3>Desmond Miles</h3>
+              <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices
+                velit.</p>
+            </div>
+            <div class="profile_social">
+              <div class="profile_social_avatar">
+                <a href=""><img src="image/ico-facebook.svg" alt=""></a>
               </div>
-              <div class="avatar">
-                <img src="image/portfolio-2.svg" alt="">
+              <div class="profile_social_avatar">
+                <a href=""><img src="image/ico-google-plus.svg" alt=""></a>
               </div>
-              <div class="avatar">
-                <img src="image/portfolio-3.svg" alt="">
+              <div class="profile_social_avatar">
+                <a href=""><img src="image/ico-twitter.svg" alt=""></a>
               </div>
-              <div>
-                <img src="image/portfolio-4.svg" alt="">
+              <div class="profile_social_avatar">
+                <a href=""><img src="image/ico-linkedin.svg" alt=""></a>
               </div>
-              <div class="avatar">
-                <img src="image/portfolio-5.svg" alt="">
+            </div>
+          </div>
+          <div class="profile">
+            <div class="profile_photo">
+              <img src="image/photo-3.svg" alt="">
+            </div>
+            <div class="profile_text">
+              <h3>Scolara Visari</h3>
+              <p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque
+                condimentum.</p>
+            </div>
+            <div class="profile_social">
+              <div class="profile_social_avatar">
+                <a href=""><img src="image/ico-facebook.svg" alt=""></a>
               </div>
-              <div class="avatar">
-                <img src="image/portfolio-6.svg" alt="">
+              <div class="profile_social_avatar">
+               <a href=""><img src="image/ico-google-plus.svg" alt=""></a>
               </div>
-              <div class="avatar">
-                <img src="image/portfolio-7.svg" alt="">
+              <div class="profile_social_avatar">
+                <a href=""><img src="image/ico-twitter.svg" alt=""></a>
               </div>
-              <div >
-                <img src="image/portfolio-8.svg" alt="">
-              </div>
-              <div class="avatar">
-                <img src="image/portfolio-9.svg" alt="">
-              </div>
-              <div class="avatar">
-                <img src="image/portfolio-10.svg" alt="">
-              </div>
-              <div class="avatar">
-                <img src="image/portfolio-11.svg" alt="">
-              </div>
-              <div>
-                <img src="image/portfolio-12.svg" alt="">
+              <div class="profile_social_avatar">
+                <a href=""><img src="image/ico-linkedin.svg" alt=""></a>
               </div>
             </div>
           </div>
@@ -180,6 +264,65 @@
       </div>
     </div>
   </section>
+  <section id="contact">
+    <div class="contact">
+      <div class="wrapper">
+        <div class="contact_title">
+          <h1>Get a Quote</h1>
+          <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi
+            erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor
+            mauris condimentum nibh.</p>
+        </div>
+        <div class="contact_main">
+          <div class="form_contact">
+            <input type="text" placeholder="Name (required)">
+            <input type="text" placeholder="Email (required)">
+            <input type="text" placeholder="Subject">
+            <input type="text" placeholder="Describe your project in detail...">
+            <input type="button" value="send">
+          </div>
+          <div class="contact_inf">
+            <h3>Contact Information</h3>
+            <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit
+              amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat
+              felis.
+            </p>
+            <div class="contact_list">
+              <ul>
+                <li class="contact_element">
+                  <img src="image/ico-location.svg" alt="">
+                  <a href="#">Elm St. 14/05 Lost City</a>
+                </li>
+                <li>
+                  <img src="image/ico-phone.svg" alt="">
+                  <a href="#">03528 331 86 35 </a></li>
+                <li>
+                  <img src="image/ico-mail.svg" alt="">
+                  <a href="#">info@singolo.com</a></li>
+              </ul>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer">
+      <div class="wrapper">
+        <div class="footer_main">
+          <div class="footer_title">
+            © Copyright 2013 
+          </div>
+          <div class="footer_contact">
+            <a href="#"><img src="image/ico-facebook.svg" alt=""></a>
+            <a href=""><img src="image/ico-google-plus.svg" alt=""></a>
+            <a href=""><img src="image/ico-twitter.svg" alt=""></a>
+            <a href=""><img src="image/ico-linkedin.svg" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
