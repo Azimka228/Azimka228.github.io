@@ -1,9 +1,18 @@
-Window.onscroll = function FixedHeader () {
+window.addEventListener('scroll', () => {
+    let ScrollDistance = window.scrollY;
 
-    var header = document.querySelector ('.header');
+    console.log(ScrollDistance)
 
-    if (window.pageYOffset > 10) {
-        header.classList.add ('header_fixed')
-    }
+    document.querySelectorAll("section").forEach((el, i) => {
+        if (el.offsetTop - document.querySelector(".header_nav").clientHeight <= ScrollDistance) {
+            document.querySelectorAll(".header_nav a").forEach((el) => {
+                if (el.classList.contains("active")) {
+                    el.classList.remove("active");
+                }
+            });
 
-} 
+            document.querySelectorAll(".header_nav li")[i].querySelector("a").classList.add("active")
+        }
+    });
+
+});

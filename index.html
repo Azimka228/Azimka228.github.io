@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Singolo</title>
+  <script src="js/script.js"></script>
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
@@ -18,8 +19,8 @@
           <span>*</span>
         </div>
         <nav class="header_nav">
-          <ul>
-            <li><a href="#">HOME</a></li>
+          <ul id="header_nav">
+            <li><a class="active" href="#">HOME</a></li>
             <li><a href="#services">SERVICES</a></li>
             <li><a href="#portfolio">PORTFOLIO</a></li>
             <li><a href="#about">ABOUT</a></li>
@@ -269,13 +270,13 @@
             mauris condimentum nibh.</p>
         </div>
         <div class="contact_main">
-          <div class="form_contact">
+          <form class="form_contact">
             <input type="text" placeholder="Name (required)">
             <input type="text" placeholder="Email (required)">
             <input type="text" placeholder="Subject">
             <textarea type="text" placeholder="Describe your project in detail..."></textarea>
             <input type="submit" value="send">
-          </div>
+          </form>
           <div class="contact_inf">
             <h3>Contact Information</h3>
             <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit
