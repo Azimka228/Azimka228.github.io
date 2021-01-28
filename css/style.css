@@ -149,7 +149,7 @@ header {
 }
 .phone_horizontal {
     position: absolute;
-    left: 313px;
+    margin-left: 313px;
     margin-top: 177px;
 }
 /*main*/
