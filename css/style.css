@@ -109,38 +109,50 @@ header {
 
 .main {
     background-color: #F06C64;
-    height: 594px;
     border-bottom: 6px solid #EA676B;
 }
 
-.main_container {
-    display: flex;
-    max-width: 1020px;
-    height: 594px;
-    position: relative;
-    margin: 0 auto;
-}
-.main_slider {
+.main_сontainer {
     display: flex;
     justify-content: space-between;
+    min-height: 594px;
+}
+.main__left_button {
+    width: 60px;
+    text-align: center;
+}
+.main__left_button img {
+    margin-top: 284px;
+}
+.main__right_button {
+    width: 60px;
+    text-align: center;
+}
+
+.main__right_button img {
+    margin-top: 284px;
+}
+.main__left_button:hover {
+    cursor: pointer;
+}
+.main__right_button:hover {
+    cursor: pointer;
+}
+.main_content {
+    min-height: 594px;
+    width: 796px;
     align-items: center;
-    width: 940px;
-    margin: 0 auto;
 }
-a.left_slider {
+.phone-vertical {
+    margin-top: 54px;
     position: absolute;
-    height: 594px;
-    width: 75px;
 }
-a.right_slider {
+.phone_horizontal {
     position: absolute;
-    height: 594px;
-    width: 75px;
-    left: 905px;
+    left: 313px;
+    margin-top: 177px;
 }
-
 /*main*/
-
 
 /*services*/
 
