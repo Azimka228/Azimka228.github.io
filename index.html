@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <header class="header" id="home">
+  <header class="header">
     <div class="wrapper">
       <div class="header_container">
         <div class="header_logo">
@@ -36,10 +36,10 @@
     <section class="main" id="home">
       <div class="wrapper">
         <div class="main_сontainer">
-          <div class="main__left_button">
+          <div class="main__arrow-left" id="btn_prev">
             <img src="image/arrow-left.svg" alt="">
           </div>
-          <div class="main_content">
+          <div class="main_content selected">
             <div class="phone-vertical">
               <img src="image/phone-vertical-all.svg" alt="">
             </div>
@@ -47,10 +47,22 @@
               <img src="image/phone-horizontal-all.svg" alt="">
             </div>
           </div>
-          <div class="main__right_button">
+          <div class="main_content">
+            <div class="slider-content">
+              <img src="image/slider-content.svg" alt="">
+            </div>
+            <div class="phone-content-mini phone-content-mini_first">
+              <img src="image/phone-content-mini.svg" alt="">
+            </div>
+            <div class="phone-content-mini phone-content-mini_second">
+              <img src="image/phone-content-mini.svg" alt="">
+            </div>
+          </div>
+          <div class="main__arrow-right" id="btn_next">
             <img src="image/arrow-right.svg" alt="">
           </div>
         </div>
+      </div>
     </section>
     <section id="services" class="services">
       <div class="wrapper">
@@ -277,8 +289,8 @@
           </div>
           <div class="contact_main">
             <form class="form_contact">
-              <input type="text" placeholder="Name (required)">
-              <input type="text" placeholder="Email (required)">
+              <input type="text" placeholder="Name (required)" minlength="4" maxlength="18" required>
+              <input type="email" placeholder="Email (required)" required>
               <input type="text" placeholder="Subject">
               <textarea type="text" placeholder="Describe your project in detail..."></textarea>
               <input type="submit" value="send">
@@ -297,7 +309,7 @@
                   </li>
                   <li>
                     <img src="image/ico-phone.svg" alt="">
-                    <a href="tel:03528 331 86 35">03528 331 86 35 </a>
+                    <a href="tel:035283318635">03528 331 86 35 </a>
                   </li>
                   <li>
                     <img src="image/ico-mail.svg" alt="">
