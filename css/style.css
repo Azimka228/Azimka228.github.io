@@ -116,8 +116,11 @@ header {
     display: flex;
     justify-content: space-between;
     min-height: 594px;
+    transition: all 1.2s ease-in-out;
+
 }
 .main__arrow-left {
+    transition: 0.6s ease;
     width: 72px;
     text-align: center;
 }
@@ -125,6 +128,7 @@ header {
     margin-top: 284px;
 }
 .main__arrow-right {
+    transition: 0.6s ease;
     width: 72px;
     text-align: center;
 }
@@ -147,6 +151,7 @@ header {
     width: 796px;
     align-items: center;
     visibility: hidden;
+ 
 }
 .selected {
     display: flex;
@@ -172,12 +177,15 @@ header {
 .phone-content-mini {
     position: absolute;
     z-index: 1;
+    opacity: 0.99;
 }
 .phone-content-mini_first {
     left: 500px;
+    opacity: 0.5;
 }
 .phone-content-mini_second {
     left: 140px;
+    opacity: 0.5;
 }
 /*main*/
 
