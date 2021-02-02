@@ -21,10 +21,12 @@ window.addEventListener('scroll', () => {
 document.addEventListener("DOMContentLoaded", () => {
     const prev = document.getElementById('btn_prev'),
         next = document.getElementById('btn_next'),
-        slides = document.querySelectorAll('.main_content');
+        slides = document.querySelectorAll('.main_content'),
+        Main = document.querySelector('.main'),
+        prevBG = document.querySelector('.main__arrow-left'),
+        nextBG = document.querySelector('.main__arrow-right');
 
     let index = 0;
-    console.log(prev);
     const activeSlide = n => {
         for (slide of slides) {
             slide.classList.remove('selected');
@@ -37,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (index == slides.length - 1) {
             index = 0;
             activeSlide(index);
+
         } else {
             index++;
             activeSlide(index);
@@ -53,4 +56,29 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     next.addEventListener('click', nextSlide)
     prev.addEventListener('click', prevslide)
+
+    document.querySelector('.main__arrow-right').onclick = function() {
+         if ( Main.classList.contains("main_bg")) {
+            Main.classList.remove("main_bg")
+        } else {
+            Main.classList.add("main_bg")
+        }
+        if ( nextBG.classList.contains("main__arrow_bg")) {
+            nextBG.classList.remove("main__arrow_bg")
+        } else {
+            nextBG.classList.add("main__arrow_bg")
+        }
+      }
+      document.querySelector('.main__arrow-left').onclick = function() {
+        if ( Main.classList.contains("main_bg")) {
+           Main.classList.remove("main_bg")
+       } else {
+           Main.classList.add("main_bg")
+       }
+       if ( prevBG.classList.contains("main__arrow_bg")) {
+            prevBG.classList.remove("main__arrow_bg")
+        } else {
+            prevBG.classList.add("main__arrow_bg")
+        }
+     }
 });

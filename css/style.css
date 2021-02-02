@@ -111,6 +111,10 @@ header {
     background-color: #F06C64;
     border-bottom: 6px solid #EA676B;
 }
+.main_bg {
+    background-color: #648BF0;
+    border-bottom: 6px solid #5e85F6;
+}
 
 .main_сontainer {
     display: flex;
@@ -123,6 +127,9 @@ header {
     transition: 0.6s ease;
     width: 72px;
     text-align: center;
+}
+.main__arrow_bg  {
+    filter: hue-rotate(220deg);
 }
 .main__arrow-left img {
     margin-top: 284px;
@@ -186,6 +193,9 @@ header {
 .phone-content-mini_second {
     left: 140px;
     opacity: 0.5;
+}
+.main_blue {
+    background-color: #767E9E;
 }
 /*main*/
 
