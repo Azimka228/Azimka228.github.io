@@ -63,11 +63,14 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             Main.classList.add("main_bg")
         }
-        if ( nextBG.classList.contains("main__arrow_bg")) {
-            nextBG.classList.remove("main__arrow_bg")
-        } else {
-            nextBG.classList.add("main__arrow_bg")
-        }
+        if ( prevBG.classList.contains("main__arrow_bg"),
+        nextBG.classList.contains("main__arrow_bg")) {
+         prevBG.classList.remove("main__arrow_bg")
+         nextBG.classList.remove("main__arrow_bg")
+     } else {
+         nextBG.classList.add("main__arrow_bg")
+         prevBG.classList.add("main__arrow_bg")
+     }
       }
       document.querySelector('.main__arrow-left').onclick = function() {
         if ( Main.classList.contains("main_bg")) {
@@ -75,9 +78,12 @@ document.addEventListener("DOMContentLoaded", () => {
        } else {
            Main.classList.add("main_bg")
        }
-       if ( prevBG.classList.contains("main__arrow_bg")) {
+       if ( prevBG.classList.contains("main__arrow_bg"),
+           nextBG.classList.contains("main__arrow_bg")) {
             prevBG.classList.remove("main__arrow_bg")
+            nextBG.classList.remove("main__arrow_bg")
         } else {
+            nextBG.classList.add("main__arrow_bg")
             prevBG.classList.add("main__arrow_bg")
         }
      }
