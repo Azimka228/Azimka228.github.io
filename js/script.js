@@ -23,9 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
         next = document.getElementById('btn_next'),
         slides = document.querySelectorAll('.main_content'),
         Main = document.querySelector('.main'),
-        prevBG = document.querySelector('.main__arrow-left'),
-        nextBG = document.querySelector('.main__arrow-right'),
-        Chips = document.querySelectorAll('.tag');
+        PTags = document.querySelectorAll(".tag");
 
     let index = 0;
     const activeSlide = n => {
@@ -75,8 +73,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /* chips */
-    function changeClass() {
-        document.querySelectorAll("tag").classList.toggle('tag_active');
+    function func() {
+        for (let i = 0; i < PTags.length; i ++){
+            PTags[i].className = ("tag");
+        }
+
+        this.classList.add("tag_active");
     }
 
+    for(let i = 0; i < PTags.length; i++){
+        PTags[i].onclick = func;
+    }
 });
