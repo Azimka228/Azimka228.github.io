@@ -24,7 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
         slides = document.querySelectorAll('.main_content'),
         Main = document.querySelector('.main'),
         prevBG = document.querySelector('.main__arrow-left'),
-        nextBG = document.querySelector('.main__arrow-right');
+        nextBG = document.querySelector('.main__arrow-right'),
+        Chips = document.querySelectorAll('.tag');
 
     let index = 0;
     const activeSlide = n => {
@@ -56,35 +57,26 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     next.addEventListener('click', nextSlide)
     prev.addEventListener('click', prevslide)
-
-    document.querySelector('.main__arrow-right').onclick = function() {
-         if ( Main.classList.contains("main_bg")) {
+    /* slider bg*/
+    document.querySelector('.main__arrow-right').onclick = function () {
+        if (Main.classList.contains("main_bg")) {
             Main.classList.remove("main_bg")
         } else {
             Main.classList.add("main_bg")
         }
-        if ( prevBG.classList.contains("main__arrow_bg"),
-        nextBG.classList.contains("main__arrow_bg")) {
-         prevBG.classList.remove("main__arrow_bg")
-         nextBG.classList.remove("main__arrow_bg")
-     } else {
-         nextBG.classList.add("main__arrow_bg")
-         prevBG.classList.add("main__arrow_bg")
-     }
-      }
-      document.querySelector('.main__arrow-left').onclick = function() {
-        if ( Main.classList.contains("main_bg")) {
-           Main.classList.remove("main_bg")
-       } else {
-           Main.classList.add("main_bg")
-       }
-       if ( prevBG.classList.contains("main__arrow_bg"),
-           nextBG.classList.contains("main__arrow_bg")) {
-            prevBG.classList.remove("main__arrow_bg")
-            nextBG.classList.remove("main__arrow_bg")
+    }
+    document.querySelector('.main__arrow-left').onclick = function () {
+        if (Main.classList.contains("main_bg")) {
+            Main.classList.remove("main_bg")
         } else {
-            nextBG.classList.add("main__arrow_bg")
-            prevBG.classList.add("main__arrow_bg")
+            Main.classList.add("main_bg")
         }
-     }
+
+    }
+
+    /* chips */
+    function changeClass() {
+        document.querySelectorAll("tag").classList.toggle('tag_active');
+    }
+
 });
