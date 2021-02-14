@@ -23,7 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
         next = document.getElementById('btn_next'),
         slides = document.querySelectorAll('.main_content'),
         Main = document.querySelector('.main'),
-        PTags = document.querySelectorAll(".tag");
+        PTags = document.querySelectorAll(".tag"),
+        Hmenu = document.querySelector('.hamburger-menu'),
+        HnavMenu = document.querySelector('.header_nav_menu');
 
     let index = 0;
     const activeSlide = n => {
@@ -71,17 +73,30 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
     }
+    Hmenu.onclick = function (e) {
+        e.preventDefault();
 
+        Hmenu.classList.toggle("hamburger-menu_img_opened")
+        if (HnavMenu.classList.contains("header_nav_menu_opened")) {
+            HnavMenu.classList.remove("header_nav_menu_opened")
+        } else {
+            HnavMenu.classList.add("header_nav_menu_opened")
+        }
+        if (Hmenu !== e.target) {
+            Hmenu.classList.remove("header_nav_menu_opened");
+        }
+
+    }
     /* chips */
     function func() {
-        for (let i = 0; i < PTags.length; i ++){
+        for (let i = 0; i < PTags.length; i++) {
             PTags[i].className = ("tag");
         }
 
         this.classList.add("tag_active");
     }
 
-    for(let i = 0; i < PTags.length; i++){
+    for (let i = 0; i < PTags.length; i++) {
         PTags[i].onclick = func;
     }
 });

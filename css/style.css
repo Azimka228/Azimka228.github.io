@@ -32,13 +32,16 @@ html,body {
 /*BURGER*/
 .hamburger-menu {
     display: none;
-
 }
 @media screen and (max-width:375px) {
     .hamburger-menu {
         display: flex;
-        padding-left: 20px;
-    
+        margin-left: 20px;
+        transition: 0.3s ease-in-out;
+        z-index: 20;
+    }
+    .hamburger-menu_img_opened {
+        transform: rotate(90deg);
     }
 } 
 
@@ -47,7 +50,6 @@ html,body {
 header {
     position: fixed;
     width: 100%;
-    opacity: 0.95;
     padding-top: 30px;
     padding-bottom: 31px;
     z-index: 200;
@@ -107,8 +109,33 @@ header {
 .header_logo h1:hover {
     cursor: default;
 }
+.header_nav_menu {
+    display: none;
+    transition: 0.4s ease-in-out;
+}
+.header_nav_menu_opened {
+    display: block;
+    height: 110vh;
+    width: 70%;
+    background-color: #2D303A;
+    position: absolute;
+    top: -15px;
+    left: 0;
+    padding: 40% 9%;
+    box-sizing: border-box;
+    z-index: 18;
+    transition: 0.4s ease-in-out;
+}
+@media screen and (max-width: 375px) {
+    .header_nav_menu_opened>.header_nav li  {
+        display: grid;
+    }
+}
 .header_nav {
     margin-top: 9px;
+}
+.header_nav_active {
+    display: block;
 }
 @media screen and (max-width:375px) {
     .header_nav {
@@ -148,7 +175,6 @@ header {
 .header_fixed {
     height: 89px;
     background-color: #2D303A; 
-    border-bottom: 5px solid #323746;
 }
 @media screen and (max-width:375px) {
     .header_fixed {
@@ -886,6 +912,11 @@ header {
     justify-content: space-between;
     height: 76px;
 }
+@media screen and (max-width:375px) {
+    .footer_main {
+        justify-content: center;
+    }
+}
 .footer_title {
     margin-top: 30px;
     margin-bottom: 29px;
@@ -895,6 +926,11 @@ header {
     line-height: 18px;
     color: #666D89;
     align-items: center;
+}
+@media screen and (max-width:375px){
+    .footer_title {
+        display: none;
+    }
 }
 .footer_contact {
     display: flex;
