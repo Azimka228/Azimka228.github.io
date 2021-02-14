@@ -276,6 +276,9 @@ header {
     top: 54px;
     position: absolute;
 }
+.phone-vertical img {
+    width: 100%;
+}
 @media screen and (max-width:768px){
     .phone-vertical {
         top: 40px;
@@ -302,6 +305,9 @@ header {
         position: absolute;
         left: 313px;
         top: 177px;
+}
+.phone_horizontal img {
+    width: 100%;
 }
 @media screen and (max-width:768px){
     .phone_horizontal {
@@ -334,6 +340,9 @@ header {
     position: absolute;
     z-index: 2;
     top:43px;
+}
+.slider-content {
+    width: 100%;
 }
 @media screen and (max-width:768px){
     .slider-content {
@@ -368,6 +377,9 @@ header {
     z-index: 1;
     opacity: 0.99;
 }
+.phone-content-mini  {
+    width: 100%;
+}
 @media screen and (max-width:768px) {
     .phone-content-mini img {
         max-width: 117px;
@@ -383,6 +395,9 @@ header {
 .phone-content-mini_first {
     left: 500px;
     opacity: 0.5;
+}
+.phone-content-mini_first img{
+    width: 100%;
 }
 @media screen and (max-width:768px) {
     .phone-content-mini_first {
@@ -617,6 +632,9 @@ header {
     }
    
 }
+.avatar img {
+    width: 100%;
+}
 .avatar:hover {
     cursor: pointer;
 }
@@ -687,6 +705,7 @@ header {
     flex-direction: column;
 }
 .profile_photo img{
+    width: 100%;
     max-width: 300px;
 }
 @media screen and (max-width:768px) {
@@ -727,6 +746,9 @@ header {
 }
 .profile_social_avatar {
     margin-right: 8px;
+}
+.profile_social_avatar img {
+    width: 100%;
 }
 .profile_social_avatar a:hover{
  cursor: pointer;
