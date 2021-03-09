@@ -1,4 +1,3 @@
-
 window.addEventListener('scroll', () => {
     let ScrollDistance = window.scrollY;
 
@@ -25,8 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         Main = document.querySelector('.main'),
         PTags = document.querySelectorAll(".tag"),
         Hmenu = document.querySelector('.hamburger-menu'),
-        HnavMenu = document.querySelector('.header_nav_menu'),
-        HnavMenuOpn = document.querySelector('.header_nav_menu_opened');
+        HnavMenu = document.querySelector('.header_nav_menu');
 
     let index = 0;
     const activeSlide = n => {
@@ -75,19 +73,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
     Hmenu.onclick = function (e) {
+        e.preventDefault();
+
         Hmenu.classList.toggle("hamburger-menu_img_opened")
-        HnavMenu.classList.toggle("header_nav_menu_opened")
-    }
-    /* chips */
-    function func() {
-        for (let i = 0; i < PTags.length; i++) {
-            PTags[i].className = ("tag");
+        if (HnavMenu.classList.contains("header_nav_menu_opened")) {
+            HnavMenu.classList.remove("header_nav_menu_opened")
+        } else {
+            HnavMenu.classList.add("header_nav_menu_opened")
+        }
+        if (Hmenu !== e.target) {
+            Hmenu.classList.remove("header_nav_menu_opened");
         }
 
-        this.classList.add("tag_active");
     }
+    /* chips */
 
-    for (let i = 0; i < PTags.length; i++) {
-        PTags[i].onclick = func;
-    }
+
+    function SetupChips (){
+        const ProfileBTN = document.querySelectorAll('.tag');
+        const ProfilePhoto = document.querySelectorAll ('.avatar');
+        ProfileBTN.forEach(button => {
+            button.addEventListener('click', (e) => {
+                for (let i = 0; i < ProfileBTN.length; i++) {
+                    ProfileBTN[i].classList.remove('tag_active')
+                }
+                e.target.classList.add('tag_active');
+                ProfilePhoto.forEach (image => {
+                   if (image.dataset.tag === e.target.dataset.tagValue || e.target.dataset.tagValue === 'All') {
+                    image.style = '';
+                   } else {
+                    image.style = 'display: none';
+                   }
+                
+                })
+            });
+        });
+     }
+     SetupChips ();
 });
