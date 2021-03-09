@@ -25,7 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
         Main = document.querySelector('.main'),
         PTags = document.querySelectorAll(".tag"),
         Hmenu = document.querySelector('.hamburger-menu'),
-        HnavMenu = document.querySelector('.header_nav_menu');
+        HnavMenu = document.querySelector('.header_nav_menu'),
+        HnavMenuOpn = document.querySelector('.header_nav_menu_opened');
 
     let index = 0;
     const activeSlide = n => {
@@ -74,18 +75,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
     Hmenu.onclick = function (e) {
-        e.preventDefault();
-
         Hmenu.classList.toggle("hamburger-menu_img_opened")
-        if (HnavMenu.classList.contains("header_nav_menu_opened")) {
-            HnavMenu.classList.remove("header_nav_menu_opened")
-        } else {
-            HnavMenu.classList.add("header_nav_menu_opened")
-        }
-        if (Hmenu !== e.target) {
-            Hmenu.classList.remove("header_nav_menu_opened");
-        }
-
+        HnavMenu.classList.toggle("header_nav_menu_opened")
     }
     /* chips */
     function func() {
