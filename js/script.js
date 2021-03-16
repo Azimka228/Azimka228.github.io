@@ -18,9 +18,9 @@ window.addEventListener('scroll', () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    const prev = document.getElementById('btn_prev'),
-        next = document.getElementById('btn_next'),
-        slides = document.querySelectorAll('.main_content'),
+    const prev = document.querySelector('.slider__button_left'),
+        next = document.querySelector('.slider__button_right'),
+        slides = document.querySelectorAll('.slides'),
         Main = document.querySelector('.main'),
         PTags = document.querySelectorAll(".tag"),
         Hmenu = document.querySelector('.hamburger-menu'),
@@ -45,7 +45,10 @@ document.addEventListener("DOMContentLoaded", () => {
             activeSlide(index);
         }
     }
-    const prevslide = () => {
+
+    next.addEventListener('click',nextSlide);
+
+    const prevSlide = () => {
         if (index == 0) {
             index = slides.length - 1;
             activeSlide(index);
@@ -54,24 +57,9 @@ document.addEventListener("DOMContentLoaded", () => {
             activeSlide(index);
         }
     }
-    next.addEventListener('click', nextSlide)
-    prev.addEventListener('click', prevslide)
-    /* slider bg*/
-    document.querySelector('.main__arrow-right').onclick = function () {
-        if (Main.classList.contains("main_bg")) {
-            Main.classList.remove("main_bg")
-        } else {
-            Main.classList.add("main_bg")
-        }
-    }
-    document.querySelector('.main__arrow-left').onclick = function () {
-        if (Main.classList.contains("main_bg")) {
-            Main.classList.remove("main_bg")
-        } else {
-            Main.classList.add("main_bg")
-        }
+    prev.addEventListener('click',prevSlide);
 
-    }
+    
     Hmenu.onclick = function (e) {
         e.preventDefault();
 
@@ -89,25 +77,30 @@ document.addEventListener("DOMContentLoaded", () => {
     /* chips */
 
 
-    function SetupChips (){
+    function SetupChips() {
         const ProfileBTN = document.querySelectorAll('.tag');
-        const ProfilePhoto = document.querySelectorAll ('.avatar');
+        const ProfilePhoto = document.querySelectorAll('.avatar');
         ProfileBTN.forEach(button => {
             button.addEventListener('click', (e) => {
                 for (let i = 0; i < ProfileBTN.length; i++) {
                     ProfileBTN[i].classList.remove('tag_active')
                 }
                 e.target.classList.add('tag_active');
-                ProfilePhoto.forEach (image => {
-                   if (image.dataset.tag === e.target.dataset.tagValue || e.target.dataset.tagValue === 'All') {
-                    image.style = '';
-                   } else {
-                    image.style = 'display: none';
-                   }
-                
+                ProfilePhoto.forEach(image => {
+                    if (image.dataset.tag === e.target.dataset.tagValue || e.target.dataset.tagValue === 'All') {
+                        image.style = '';
+                    } else {
+                        image.style = 'display: none';
+                    }
+
                 })
             });
         });
+        ProfilePhoto.forEach(images => {
+            images.addEventListener('click', (e) => {
+                e.target.style = 'opacity: 0.5;'
+            })
+        });
      }
-     SetupChips ();
+    SetupChips();
 });

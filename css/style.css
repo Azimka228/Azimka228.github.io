@@ -27,6 +27,7 @@ html,body {
 }
 /*BURGER*/
 .hamburger-menu {
+    width: 1;
     display: none;
 }
 @media screen and (max-width:768px) {
@@ -82,7 +83,8 @@ header {
 }
 @media screen and (max-width:768px) {
     .header_logo {
-        margin-left: 33% ;
+        margin-left: auto;
+        margin-right: auto;
         align-items: center;
         display: flex;
     }
@@ -184,248 +186,49 @@ header {
 
 /* header*/
 
-
-/*main*/
-
-.main {
+/* slider*/
+.slider {
+    height: 59hw;
+}
+.first__slide {
     background-color: #F06C64;
-    border-bottom: 6px solid #EA676B;
 }
-@media screen and (max-width:375px){
-    .main .wrapper {
-        max-width: 375px;
-    }
-}
-.main_bg {
-    background-color: #648BF0;
-    border-bottom: 6px solid #5e85F6;
-}
-
-.main_сontainer {
+.Slide {
     display: flex;
-    justify-content: space-between;
-    transition: all 1.2s ease-in-out;
-
-}
-.main__arrow-left {
-    display: flex;
-    justify-content: center;
+    font-size: 0;
     align-items: center;
-    transition: 0.6s ease;
-    width: 72px;
-    text-align: center;
-}
-@media screen and (max-width:375px){
-    .main__arrow-left, .main__arrow-right{
-        min-width: 46px;
-    }
-}
-.main__arrow-left img {
-    color:#000000;
-    filter: grayscale(100%) ;
-    opacity: 0.3;
-}
-.main__arrow-right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.6s ease;
-    width: 72px;
-    text-align: center;
-}
-
-.main__arrow-right img {
-    color:#000000;
-    filter: grayscale(100%) ;
-    opacity: 0.3;
-}
-.main__arrow-left:hover {
-    cursor: pointer;
-}
-.main__arrow-right:hover {
-    cursor: pointer;
-}
-.main_content {
-    display: none;
+    max-width: 1020px;
+    margin: 0 auto;
+    overflow: hidden;
     position: relative;
-    min-height: 594px;
-    width: 796px;
-    visibility: hidden;
- 
 }
-@media screen and (max-width:375px) {
-    .main_content {
-        min-height: 218px !important;
-    }
+.slider__button_left {
+    z-index: 20;
+    position: absolute;
+    left: 3.8%;
+    cursor: pointer;
 }
-@media screen and (max-width:768px){
-    .main_content {
-        display: none;
-        position: relative;
-        min-height: 451px;
-        width: 796px;
-        visibility: hidden;
-     
-    } 
+.slider__button_left img{
+    filter: grayscale(1);
+    opacity: 0.4;
+}
+.slider__button_right {
+    z-index: 20;
+    position: absolute;
+    right: 3.8%;
+    cursor: pointer;
+}
+.slider__button_right img{
+    filter: grayscale(1);
+    opacity: 0.4;
+}
+.slides {
+    display: none;
 }
 .selected {
-    display: flex;
-    visibility: visible !important;
+    display: block;
 }
-.phone-vertical {
-    top: 54px;
-    position: absolute;
-}
-.phone-vertical img {
-    width: 100%;
-}
-@media screen and (max-width:768px){
-    .phone-vertical {
-        top: 40px;
-        position: absolute;
-    }
-    .phone-vertical img {
-        max-width: 180px;
-        max-height: 363px;
-    }
-   
-}
-@media screen and (max-width:375px){
-    .phone-vertical {
-        top: 20px;
-        position: absolute;
-    }
-    .phone-vertical img {
-        max-width: 79px;
-        max-height: 168px;
-    }
-   
-}
-.phone_horizontal {
-        position: absolute;
-        left: 313px;
-        top: 177px;
-}
-.phone_horizontal img {
-    width: 100%;
-}
-@media screen and (max-width:768px){
-    .phone_horizontal {
-        position: absolute;
-        left: 234px;
-        top: 133px;
-    }
-    .phone_horizontal img {
-        max-width: 364px;
-        max-height: 180px;
-    }
-   
-}
-@media screen and (max-width:375px){
-    .phone_horizontal {
-        left:109px;
-        top:65px;
-        width: 168px;
-        height: 79px;
-        position: absolute;
-    }
-    .phone_horizontal img {
-        max-width: 168px;
-        max-height: 79px;
-    }
-   
-}
-.slider-content {
-    left: 271px;
-    position: absolute;
-    z-index: 2;
-    top:43px;
-}
-@media screen and (max-width:768px){
-    .slider-content {
-        top: 40px;
-        left: 204px;
-        position: absolute;
-        z-index: 2;
-
-    }
-    .slider-content img {
-        max-width: 191px;
-        max-height: 386px;
-    }
-}
-@media screen and (max-width:375px){
-    .slider-content {
-        top: 15px;
-        left: 93px;
-        position: absolute;
-        z-index: 2;
-        height: 191px;
-
-    }
-    .slider-content img {
-        width: 93px;
-        height: 191px;
-    }
-}
-.phone-content-mini {
-    top:152px;
-    position: absolute;
-    z-index: 1;
-    opacity: 0.99;
-}
-
-@media screen and (max-width:768px) {
-    .phone-content-mini img {
-        max-width: 117px;
-        max-height: 236px;
-    }
-}
-@media screen and (max-width:375px) {
-    .phone-content-mini img {
-        width: 57px;
-        height: 117px;
-    }
-}
-.phone-content-mini_first {
-    left: 500px;
-    opacity: 0.5;
-}
-
-@media screen and (max-width:768px) {
-    .phone-content-mini_first {
-        left:105px;
-        top:120px;
-    }
-}
-@media screen and (max-width:375px) {
-    .phone-content-mini_first {
-        left: 46px;
-        top: 55px;
-    }
-}
-.phone-content-mini_second {
-    left: 140px;
-    opacity: 0.5;
-}
-@media screen and (max-width:768px) {
-    .phone-content-mini_second {
-        left:376px;
-        top:120px;
-    }
-}
-@media screen and (max-width:375px) {
-    .phone-content-mini_second {
-        left:176px;
-        top:55px;
-    }
-}
-.main_blue {
-    background-color: #767E9E;
-}
-/*main*/
-
-/*services*/
+/* slider*/
 
 
 .services {
@@ -474,7 +277,7 @@ header {
     }
    
 }
-@media screen and (max-width:375px){
+@media screen and (max-width:480px){
     .services__elements {
         display: grid;
         grid-template-columns: 1fr;
@@ -605,7 +408,7 @@ header {
     }
    
 }
-@media screen and (max-width:375px){
+@media screen and (max-width:520px){
     .portfolio__element{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -613,7 +416,24 @@ header {
     }
    
 }
+.avatar {
+    transition: 1s;
+    font-size: 0;
+    animation: AvatarEff 1s linear forwards;
+}
+.avatar img:hover {
+    opacity: 0.5;
+}
+@keyframes AvatarEff {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
 .avatar img {
+    transition: 1s;
     width: 100%;
 }
 .avatar:hover {
