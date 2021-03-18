@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         Main = document.querySelector('.main'),
         PTags = document.querySelectorAll(".tag"),
         Hmenu = document.querySelector('.hamburger-menu'),
-        HnavMenu = document.querySelector('.header_nav_menu');
+        HnavMenu = document.querySelector('.header_nav');
 
     let index = 0;
     const activeSlide = n => {
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    next.addEventListener('click',nextSlide);
+    next.addEventListener('click', nextSlide);
 
     const prevSlide = () => {
         if (index == 0) {
@@ -57,23 +57,39 @@ document.addEventListener("DOMContentLoaded", () => {
             activeSlide(index);
         }
     }
-    prev.addEventListener('click',prevSlide);
+    prev.addEventListener('click', prevSlide);
 
-    
+
     Hmenu.onclick = function (e) {
         e.preventDefault();
 
         Hmenu.classList.toggle("hamburger-menu_img_opened")
-        if (HnavMenu.classList.contains("header_nav_menu_opened")) {
-            HnavMenu.classList.remove("header_nav_menu_opened")
+        if (HnavMenu.classList.contains("header_nav_opened")) {
+            HnavMenu.classList.remove("header_nav_opened")
         } else {
-            HnavMenu.classList.add("header_nav_menu_opened")
-        }
-        if (Hmenu !== e.target) {
-            Hmenu.classList.remove("header_nav_menu_opened");
+            HnavMenu.classList.add("header_nav_opened")
         }
 
+        document.querySelector('.header_nav_modal').classList.toggle("header_nav_modal_opened");
     }
+
+    let HeaderModal = document.querySelector('.header_nav_modal');
+
+    HeaderModal.addEventListener("click", e => {
+        HnavMenu.classList.remove("header_nav_opened");
+        HeaderModal.classList.remove("header_nav_modal_opened");
+        Hmenu.classList.remove("hamburger-menu_img_opened");
+    });
+
+    let HeaderNavLi = document.querySelectorAll(".header_nav li");
+    for (var i = 0; i < HeaderNavLi.length; i++) {
+        HeaderNavLi[i].addEventListener('click', (e) => {
+            HnavMenu.classList.remove("header_nav_opened");
+            HeaderModal.classList.remove("header_nav_modal_opened");
+            Hmenu.classList.remove("hamburger-menu_img_opened");
+        });
+    }
+
     /* chips */
 
 
@@ -101,6 +117,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 e.target.style = 'opacity: 0.5;'
             })
         });
-     }
+    }
     SetupChips();
 });
