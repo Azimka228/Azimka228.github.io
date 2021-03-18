@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
         Hmenu.classList.remove("hamburger-menu_img_opened");
     });
 
-    let HeaderNavLi = document.querySelectorAll(".header_nav li");
+    let HeaderNavLi = document.querySelectorAll(".header_nav li a");
     for (var i = 0; i < HeaderNavLi.length; i++) {
         HeaderNavLi[i].addEventListener('click', (e) => {
             HnavMenu.classList.remove("header_nav_opened");
