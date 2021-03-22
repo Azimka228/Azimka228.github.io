@@ -4,13 +4,13 @@ window.addEventListener('scroll', () => {
 
 
     document.querySelectorAll("section").forEach((el, i) => {
-        if (el.offsetTop - document.querySelector(".header_nav").clientHeight <= ScrollDistance) {
+        if (el.offsetTop - document.querySelector(".header_fixed").clientHeight <= ScrollDistance) {
             document.querySelectorAll(".header_nav a").forEach((el) => {
                 if (el.classList.contains("active")) {
                     el.classList.remove("active");
                 }
             });
-
+            console.log(document.querySelector(".header_fixed").clientHeight);
             document.querySelectorAll(".header_nav li")[i].querySelector("a").classList.add("active")
         }
     });

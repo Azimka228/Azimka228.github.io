@@ -152,11 +152,13 @@ header {
         box-shadow: 0px -40px 20px rgb(0 0 0 / 40%);
         animation-name: slidein;
         animation-duration: 1s;
+        animation-direction: normal;     
+        overflow: auto; 
     }
 
     @keyframes slidein {
         from {
-            left: -230px;
+            left: -340px;
         }
       
         to {
@@ -164,16 +166,16 @@ header {
         }
       }
 
-    .header_nav ul li:not(:last-child)::after {
-        content: none !important;
+    #header_nav li:not(:last-child)::after {
+        content: none ;
     }
     #header_nav {
         flex-direction: column;
         display: flex;
     }
     
-    .header_nav ul li:not(:first-child) {
-        margin-left: 0 !important ;
+    #header_nav li:not(:first-child) {
+        margin-left: 0 ;
     }
     .header_nav ul>li>a {
         font-size: 24px;
