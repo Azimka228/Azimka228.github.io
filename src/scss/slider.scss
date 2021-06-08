@@ -1,0 +1,39 @@
+.slide {
+    display: flex;
+    font-size: 0;
+    align-items: center;
+    max-width: 1020px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    &r {
+        height: 59hw;
+        &__button_left {
+            z-index: 20;
+            position: absolute;
+            left: 3.8%;
+            cursor: pointer;
+        }
+        &__button_left img{
+            filter: grayscale(1);
+            opacity: 0.4;
+        }
+        &__button_right {
+            z-index: 20;
+            position: absolute;
+            right: 3.8%;
+            cursor: pointer;
+        }
+        &__button_right img{
+            filter: grayscale(1);
+            opacity: 0.4;
+        }
+    }
+    &s {
+        display: none;
+    }
+}
+.selected {
+    overflow: hidden;
+    display: block;
+}

@@ -1,0 +1,93 @@
+.about {
+    background-color: #F2F2F2;
+    border-bottom: 5px solid #FFFFFF;
+    padding: 59px 40px 59px 40px;
+    @media screen and (max-width:768px){
+            background-color: #F2F2F2;
+            border-bottom: 5px solid #FFFFFF;
+            padding: 52px 30px 75px 30px;
+    }
+    &_title {
+        display: flex;
+        flex-direction: column;
+        h1{
+            font-style: normal;
+            font-weight: 900;
+            font-size: 30px;
+            line-height: 36px;
+            color: #666D89;
+        }
+        p {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 30px;
+            color: #767E9E;
+            padding: 14px 0 57px 0;
+        }
+    }
+    &_profiles {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 10px;
+        @media screen and (max-width:560px){
+                max-width: 314px;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-column-gap: 20px;
+                grid-row-gap: 10px;
+        }
+    }
+    
+}
+.profile {
+    display: flex;
+    flex-direction: column;
+    &_photo {
+        width: 100%;
+        font-size: 0;
+        img{
+            width: 100%;
+            max-width: 300px;
+            @media screen and (max-width:560px) {
+                    max-width: 314px;
+            }
+        }
+    }
+    &_text {
+        display: flex;
+        flex-direction: column;
+        h3 {
+            font-style: normal;
+            font-weight: 900;
+            font-size: 18px;
+            line-height: 18px;
+            color: #666D89;
+            margin-top: 17px;
+            margin-bottom: 7px;
+        }
+        p {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 22px;
+            text-align: justify;
+            color: #767E9E;
+        }
+    }
+    &_social {
+        display: flex;
+        margin-top: 12px;
+        &_avatar {
+            margin-right: 8px;
+            img {
+                width: 100%;
+            }
+            a:hover{
+                cursor: pointer;
+               }
+        }
+    }
+}

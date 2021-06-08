@@ -1,0 +1,39 @@
+.contact {
+    background-color: #F06C64;
+    border-bottom: 6px solid #EA676B;
+    padding: 59px 40px 59px 40px;
+    @media screen and (max-width:768px){
+            background-color: #F06C64;
+            border-bottom: 6px solid #EA676B;
+            padding: 53px 30px 45px 30px;
+        }
+    &_title {
+        display: flex;
+        flex-direction: column;
+        h1 {
+            font-style: normal;
+            font-weight: 900;
+            font-size: 30px;
+            line-height: 36px;
+            color: #F0D8D9;
+        }
+        p {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 30px;
+            color: #F0D8D9;
+            padding: 14px 0 57px 0;
+        }
+    }
+    &_main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-column-gap: 20px;
+        @media screen and (max-width:560px){
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-row-gap: 32px;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.footer {
+    background-color: #2D303A;
+    height: 76px;
+    padding: 0px 40px 0px 40px;
+    &_main {
+        display: flex;
+        justify-content: space-between;
+        height: 76px;
+        @media screen and (max-width:768px) {
+            justify-content: center;
+        }
+    }
+    &_title {
+        margin-top: 30px;
+        margin-bottom: 29px;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 13px;
+        line-height: 18px;
+        color: #666D89;
+        align-items: center;
+        @media screen and (max-width:768px){
+                display: none;
+        }
+    }
+    &_contact {
+        display: flex;
+        margin-top:20px;
+        margin-bottom:20px;
+        margin-right: 2px;
+        img {
+            margin-right: 8px;
+        }
+        a:hover {
+            cursor: pointer;
+        }
+    }
+    
+}

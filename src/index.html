@@ -277,12 +277,19 @@
         </div>
         <div class="contact_main">
           <form class="form_contact">
-            <input data-form="name" type="text" placeholder="Name (required)" minlength="4" maxlength="18" required>
-            <input data-form="email" type="email" placeholder="Email (required)" required>
-            <input data-form="text" type="text" placeholder="Subject">
-            <textarea data-form="textarea" type="text" placeholder="Describe your project in detail..."></textarea>
-            <button data-form="send" type="submit" >send</button>
+            <input class="FormName" type="text" placeholder="Name (required)" minlength="4" maxlength="18" required>
+            <input class="FormEmail" type="email" placeholder="Email (required)" required>
+            <input class="FormText" type="text" placeholder="Subject">
+            <textarea class="FormTextarea" data-form="textarea" type="text" placeholder="Describe your project in detail..."></textarea>
+            <button class="FormSend" type="submit" >send</button>
           </form>
+          <div class="modal__overlay" data-closing='true'>
+            <div class="modal__window">
+              <div class="modal__header">succees</div>
+              <div class="modal__body"><img src="image/Success2.png" alt=""></div>
+              <div class="modal__footer"><button class="ModalClose" type="button" data-closing='true'>Close</button></div>
+            </div>
+          </div>
           <div class="contact_inf">
             <h3>Contact Information</h3>
             <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit

@@ -1,0 +1,105 @@
+%Form{
+    height: 38px;
+    background-color: #D6564F;
+    color: #F48C8F;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    border: none;
+    border-radius: 5px;
+    padding-left: 14px;
+    margin-bottom: 14px;
+}
+.form_contact {
+    display: flex;
+    flex-direction: column;
+    [type="text"],
+    [type="email"]{
+        @extend %Form;
+    }
+    [type="text"]{
+        &:focus {
+            border: #323746;
+        }
+        &:nth-child(4) {
+            height: 159px;
+            padding-top: 10px;
+            resize: none;
+        }
+    }
+    [type="submit"] {
+        background-color: #FBC65F;
+        border: none;
+        border-radius: 5px;
+        height: 38px;
+        width: 136px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        color: #886A30;
+        text-transform: uppercase;
+        transition: .7s background-color ease-in-out;
+        &:hover {
+            cursor: pointer;
+            background-color: yellow;
+         }
+        &:focus {
+            outline: none;
+        }
+    }
+}
+.contact_inf {
+    display: flex;
+    flex-direction: column;
+    h3 {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 18px;
+        color: #F0D8D9;
+        margin-bottom: 7px;
+    }
+    p {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 22px;
+        text-align: justify;
+        color: #F0D8D9;
+        margin-bottom: 15px;
+    }
+}
+.contact_list {
+    width: 148px;
+    height: 63px;
+    li{
+        width: 148px;
+        height: 19px;
+    }
+    a {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 22px;
+        text-align: justify;
+        color: #F0D8D9;
+        margin-bottom: 3px;
+    }
+    ul {
+        li:nth-child(1)>img {
+            margin-right: 14px;
+       }
+       li:nth-child(2)>img {
+        margin-right: 11px;
+       }
+       li:nth-child(3)>img {
+        margin-right: 10px;
+       }
+    }
+}
+.textarea {
+    padding: 10px;
+    overflow: hidden;
+}

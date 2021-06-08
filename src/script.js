@@ -1,4 +1,4 @@
-import styles from './css/style.css';
+import styles from './css/main.css';
 
 
 window.addEventListener('scroll', () => {
@@ -89,38 +89,67 @@ document.addEventListener("DOMContentLoaded", () => {
         item.addEventListener('click', event => {
             HeaderNavClose()
         })
-      })
+    })
 
 
 
-/* chips */
+    /* chips */
 
 
-function SetupChips() {
-    const ProfileBTN = document.querySelectorAll('.tag');
-    const ProfilePhoto = document.querySelectorAll('.avatar');
-    ProfileBTN.forEach(button => {
-        button.addEventListener('click', (e) => {
-            for (let i = 0; i < ProfileBTN.length; i++) {
-                ProfileBTN[i].classList.remove('tag_active')
-            }
-            e.target.classList.add('tag_active');
-            ProfilePhoto.forEach(image => {
-                if (image.dataset.tag === e.target.dataset.tagValue || e.target.dataset.tagValue === 'All') {
-                    image.style = '';
-                } else {
-                    image.style = 'display: none';
+    function SetupChips() {
+        const ProfileBTN = document.querySelectorAll('.tag');
+        const ProfilePhoto = document.querySelectorAll('.avatar');
+        ProfileBTN.forEach(button => {
+            button.addEventListener('click', (e) => {
+                for (let i = 0; i < ProfileBTN.length; i++) {
+                    ProfileBTN[i].classList.remove('tag_active')
                 }
+                e.target.classList.add('tag_active');
+                ProfilePhoto.forEach(image => {
+                    if (image.dataset.tag === e.target.dataset.tagValue || e.target.dataset.tagValue === 'All') {
+                        image.style = '';
+                    } else {
+                        image.style = 'display: none';
+                    }
 
-            })
+                })
+            });
         });
-    });
-}
-SetupChips();
-let FormQuote = document.querySelector('.form_contact')
-FormQuote.addEventListener('click', (e) => {
-    if (e.target.dataset.form === 'send') {
-        console.log('dsd')
     }
-})
+    SetupChips();
+
+    const ModalOverlay = document.querySelector('.modal__overlay')
+    const ModalWindow = document.querySelector('.modal__window')
+
+    function ModalOpen() {
+        ModalOverlay.classList.add('open')
+        setTimeout(function () { ModalWindow.classList.add('open') }, 500)
+
+    }
+    function Modalclose() {
+        ModalWindow.classList.remove('open')
+        setTimeout(function () { ModalOverlay.classList.remove('open') }, 500)
+
+    }
+
+    function FormClear() {
+        document.querySelector('.FormName').value = ''
+        document.querySelector('.FormEmail').value = ''
+        document.querySelector('.FormText').value = ''
+        document.querySelector('.FormTextarea').value = ''
+    }
+
+
+    let FormQuote = document.querySelector('.form_contact')
+    FormQuote.addEventListener('submit', (e) => {
+        e.preventDefault()
+        ModalOpen()
+        FormClear()
+    })
+
+    ModalOverlay.addEventListener('click', (e)=> {
+        if (e.target.dataset.closing) {
+            Modalclose()
+        }
+    })
 });

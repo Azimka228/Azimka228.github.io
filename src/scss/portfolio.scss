@@ -1,0 +1,117 @@
+.porfolio {
+    background-color: #2D303A;
+    border-bottom: 6px solid #323746;
+    padding: 59px 40px 59px 40px;
+@media screen and (max-width:768px) {
+        background-color: #2D303A;
+        border-bottom: 6px solid #323746;
+        padding: 59px 30px 73px 30px;
+ }
+}
+
+
+.portfolio {
+    &_title{
+        display: flex;
+        flex-direction: column;
+        h1{
+            margin-bottom: 14px;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 30px;
+            line-height: 36px;
+            color: #666D89;
+        }
+        p {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 30px;
+            color: #767E9E;
+        }
+    }
+    &_nav {
+        padding: 11px 0 18px 0;
+    }
+    &_tags {
+        padding: 11px 0 18px 0 ;
+    }
+    &__content {
+        display: flex;
+    }
+    &__element{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 20px;
+        @media screen and (max-width:768px){
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 20px;
+        }
+        @media screen and (max-width:520px){
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+    }
+}
+.tag {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    background-color: #2D303A;
+    color: #767E9E;
+    border: 1px solid #767E9E;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 4px 7px 4px 7px;
+    &:not(:first-child) {
+        margin-left: 6px;
+    }
+    &:hover {
+        cursor: pointer;
+        color: #DEDEDE;
+        border: 1px solid #BBBBBB;
+        box-sizing: border-box;
+        border-radius: 5px;
+        transition: 1s ease-in-out;
+    }
+    &:focus {
+        outline: none;
+    }
+    &_active {
+        color: #DEDEDE;
+        border: 1px solid #BBBBBB;
+        box-sizing: border-box;
+        border-radius: 5px;
+        cursor: default;
+        &:hover {
+            cursor: default;
+        }
+    }
+}
+.avatar {
+    transition: 1s;
+    font-size: 0;
+    animation: AvatarEff 1s linear forwards;
+    @keyframes AvatarEff {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+    }
+    &:hover {
+        cursor: pointer;
+    }
+    img{
+        transition: 1s;
+        width: 100%;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+    
+}
