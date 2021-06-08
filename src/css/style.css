@@ -136,9 +136,6 @@ header {
 }
 @media screen and (max-width:768px) {
     .header_nav {
-        display: none;
-    }
-    .header_nav_opened {
         left: 0px;
         z-index: 19;
         display: block;
@@ -154,6 +151,27 @@ header {
         animation-duration: 1s;
         animation-direction: normal;     
         overflow: auto; 
+        transform: translateX(-600px);
+        transition: transform .5s ease-in-out;
+    }
+    .header_nav.header_nav_opened {
+        left: 0px;
+        z-index: 19;
+        display: block;
+        height: 101vh;
+        width: 70%;
+        background-color: #2D303A;
+        position: absolute;
+        top: -15px;
+        padding: 40% 9%;
+        box-sizing: border-box;
+        box-shadow: 0px -40px 20px ;
+        animation-name: slidein;
+        animation-duration: 1s;
+        animation-direction: normal;     
+        overflow: auto; 
+        transform: translateX(0px);
+        transition: transform 1s ease-in-out;
     }
 
     @keyframes slidein {
