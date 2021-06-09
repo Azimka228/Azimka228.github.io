@@ -137,7 +137,7 @@ header {
     animation-name: slidein;
     animation-duration: 1s;
     animation-direction: normal;
-    overflow: auto;
+    overflow: none;
     transform: translateX(-600px);
     transition: transform 0.5s ease-in-out;
   }
