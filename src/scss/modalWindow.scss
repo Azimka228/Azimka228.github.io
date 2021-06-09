@@ -17,10 +17,9 @@
     &__window{
         display: grid;
         position: absolute;
-        left: 20%;
+        left: 25%;
         top: 25%;
-        width: 65%;
-        border: 2px solid #F2F2F2;
+        width: 50%;
         background: #2D303A;
         min-height: 300px;
         max-height: 400px;
@@ -37,14 +36,18 @@
         font-size: 2rem;
         font-size: 35px;
         padding: 7px;
-        border-bottom: 2px solid #F2F2F2;
+        color: #FFFFFF;
     }
     &__body{
         display: flex;
-        padding: 10%;
-        font-size: 1.5em;
         align-self: center;
         justify-content: center;
+        color: #FFFFFF;
+        margin: 0 auto;
+        height: 60%;
+        width: 60%;
+        border-radius: 100%;
+        border-bottom: 2px solid white;
         & img {
             height: 100%;
             width: 30%;

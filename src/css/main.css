@@ -263,15 +263,6 @@ html, body {
   color: #F06C64 !important;
 }
 
-.slide {
-  display: flex;
-  font-size: 0;
-  align-items: center;
-  max-width: 1020px;
-  margin: 0 auto;
-  overflow: hidden;
-  position: relative;
-}
 .slider {
   height: 59hw;
 }
@@ -297,6 +288,16 @@ html, body {
 }
 .slides {
   display: none;
+}
+
+.Slide {
+  display: flex;
+  font-size: 0;
+  align-items: center;
+  max-width: 1020px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
 }
 
 .selected {
@@ -659,6 +660,10 @@ html, body {
   padding-left: 14px;
   margin-bottom: 14px;
 }
+.form_contact [type=text]::placeholder,
+.form_contact [type=email]::placeholder {
+  color: #F48C8F;
+}
 
 .form_contact {
   display: flex;
@@ -809,10 +814,9 @@ html, body {
 .modal__window {
   display: grid;
   position: absolute;
-  left: 20%;
+  left: 25%;
   top: 25%;
-  width: 65%;
-  border: 2px solid #F2F2F2;
+  width: 50%;
   background: #2D303A;
   min-height: 300px;
   max-height: 400px;
@@ -829,13 +833,18 @@ html, body {
   font-size: 2rem;
   font-size: 35px;
   padding: 7px;
-  border-bottom: 2px solid #F2F2F2;
+  color: #FFFFFF;
 }
 .modal__body {
-  padding: 10%;
-  font-size: 1.5em;
+  display: flex;
   align-self: center;
   justify-content: center;
+  color: #FFFFFF;
+  margin: 0 auto;
+  height: 60%;
+  width: 60%;
+  border-radius: 100%;
+  border-bottom: 2px solid white;
 }
 .modal__body img {
   height: 100%;

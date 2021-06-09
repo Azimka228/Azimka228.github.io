@@ -1,11 +1,4 @@
 .slide {
-    display: flex;
-    font-size: 0;
-    align-items: center;
-    max-width: 1020px;
-    margin: 0 auto;
-    overflow: hidden;
-    position: relative;
     &r {
         height: 59hw;
         &__button_left {
@@ -32,6 +25,15 @@
     &s {
         display: none;
     }
+}
+.Slide {
+    display: flex;
+    font-size: 0;
+    align-items: center;
+    max-width: 1020px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
 }
 .selected {
     overflow: hidden;
