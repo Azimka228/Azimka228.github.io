@@ -29,9 +29,9 @@ class ArrayPushCallbackChunkFormatPlugin {
 			compilation => {
 				compilation.hooks.additionalChunkRuntimeRequirements.tap(
 					"ArrayPushCallbackChunkFormatPlugin",
-					(chunk, set) => {
+					(chunk, set, { chunkGraph }) => {
 						if (chunk.hasRuntime()) return;
-						if (compilation.chunkGraph.getNumberOfEntryModules(chunk) > 0) {
+						if (chunkGraph.getNumberOfEntryModules(chunk) > 0) {
 							set.add(RuntimeGlobals.onChunksLoaded);
 							set.add(RuntimeGlobals.require);
 						}
@@ -47,9 +47,8 @@ class ArrayPushCallbackChunkFormatPlugin {
 							chunk instanceof HotUpdateChunk ? chunk : null;
 						const globalObject = runtimeTemplate.outputOptions.globalObject;
 						const source = new ConcatSource();
-						const runtimeModules = chunkGraph.getChunkRuntimeModulesInOrder(
-							chunk
-						);
+						const runtimeModules =
+							chunkGraph.getChunkRuntimeModulesInOrder(chunk);
 						if (hotUpdateChunk) {
 							const hotUpdateGlobal =
 								runtimeTemplate.outputOptions.hotUpdateGlobal;
@@ -83,24 +82,17 @@ class ArrayPushCallbackChunkFormatPlugin {
 								chunkGraph.getChunkEntryModulesWithChunkGroupIterable(chunk)
 							);
 							if (runtimeModules.length > 0 || entries.length > 0) {
-								const strictBailout = hooks.strictRuntimeBailout.call(
-									renderContext
-								);
 								const runtime = new ConcatSource(
 									(runtimeTemplate.supportsArrowFunction()
 										? "__webpack_require__ =>"
 										: "function(__webpack_require__)") +
-										" { // webpackRuntimeModules\n",
-									strictBailout
-										? `// runtime can't be in strict mode because ${strictBailout}.\n\n`
-										: '"use strict";\n\n'
+										" { // webpackRuntimeModules\n"
 								);
 								if (runtimeModules.length > 0) {
 									runtime.add(
 										Template.renderRuntimeModules(runtimeModules, {
 											...renderContext,
-											codeGenerationResults: compilation.codeGenerationResults,
-											useStrict: !!strictBailout
+											codeGenerationResults: compilation.codeGenerationResults
 										})
 									);
 								}
@@ -124,6 +116,13 @@ class ArrayPushCallbackChunkFormatPlugin {
 											}
 										)
 									);
+									if (
+										chunkGraph
+											.getChunkRuntimeRequirements(chunk)
+											.has(RuntimeGlobals.returnExportsFromRuntime)
+									) {
+										runtime.add("return __webpack_exports__;\n");
+									}
 								}
 								runtime.add("}\n");
 								source.add(",\n");

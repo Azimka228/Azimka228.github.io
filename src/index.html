@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -19,7 +20,7 @@
           <div class="hamburger-menu_img ">
             <img src="image/Burger-menu-icon.svg" alt="">
           </div>
-          
+
         </div>
         <div class="header_logo">
           <h1>Singolo</h1>
@@ -42,18 +43,19 @@
   </div>
   <main>
     <section class="slider" id="home">
-      <div class="slider__content">
-        <div class="Slide">
-          <div class="slider__button_left">
-            <img src="image/slider/arrow-left.svg" alt="">
-          </div>
-          <div class="slider__button_right">
-            <img src="image/slider/arrow-right.svg" alt="">
-          </div>
-          <img class ="slides selected" src="image/slider/Slide-1.svg" style="width: 100%" alt="">
-          <img class ="slides" src="image/slider/Slide-2.svg" style="width: 100%; border-bottom: 6px solid #5e85F6;" alt="">
+      <div class="swiper-container mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" > <img  src="image/slider/Slide-1.svg" alt=""></div>
+          <div class="swiper-slide" ><img  src="image/slider/Slide-2.svg"  alt=""></div>
         </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
       </div>
+      
+      
+
+
     </section>
     <section id="services" class="services">
       <div class="wrapper">
@@ -280,14 +282,16 @@
             <input class="FormName" type="text" placeholder="Name (required)" minlength="4" maxlength="18" required>
             <input class="FormEmail" type="email" placeholder="Email (required)" required>
             <input class="FormText" type="text" placeholder="Subject">
-            <textarea class="FormTextarea" data-form="textarea" type="text" placeholder="Describe your project in detail..."></textarea>
-            <button class="FormSend" type="submit" >send</button>
+            <textarea class="FormTextarea" data-form="textarea" type="text"
+              placeholder="Describe your project in detail..."></textarea>
+            <button class="FormSend" type="submit">send</button>
           </form>
           <div class="modal__overlay" data-closing='true'>
             <div class="modal__window">
               <div class="modal__header">succees</div>
               <div class="modal__body"><img src="image/Success2.png" alt=""></div>
-              <div class="modal__footer"><button class="ModalClose" type="button" data-closing='true'>Close</button></div>
+              <div class="modal__footer"><button class="ModalClose" type="button" data-closing='true'>Close</button>
+              </div>
             </div>
           </div>
           <div class="contact_inf">
@@ -336,6 +340,7 @@
       </div>
     </div>
   </footer>
+  
 </body>
 
 </html>

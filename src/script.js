@@ -1,13 +1,40 @@
 import styles from './css/main.css';
+import Swiper from 'swiper';
+  // import Swiper styles
+import 'swiper/swiper-bundle.css';
+import SwiperCore, { Navigation, Pagination } from 'swiper/core';
 
+// configure Swiper to use modules
+SwiperCore.use([Navigation, Pagination]);
 
+const swiper = new Swiper('.swiper-container', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
 window.addEventListener('scroll', () => {
     let ScrollDistance = window.scrollY;
 
 
 
     document.querySelectorAll("section").forEach((el, i) => {
-        if (el.offsetTop - document.querySelector(".header_fixed").clientHeight <= ScrollDistance) {
+        if (el.offsetTop - document.querySelector(".header_fixed").clientHeight <= ScrollDistance - 85) {
             document.querySelectorAll(".header_nav a").forEach((el) => {
                 if (el.classList.contains("active")) {
                     el.classList.remove("active");

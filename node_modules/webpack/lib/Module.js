@@ -93,8 +93,9 @@ const makeSerializable = require("./util/makeSerializable");
 
 /**
  * @typedef {Object} NeedBuildContext
+ * @property {Compilation} compilation
  * @property {FileSystemInfo} fileSystemInfo
- * @property {Map<string, string>} valueCacheVersions
+ * @property {Map<string, string | Set<string>>} valueCacheVersions
  */
 
 /** @typedef {KnownBuildMeta & Record<string, any>} BuildMeta */
