@@ -1,4 +1,4 @@
-import styles from './css/main.css';
+import styles from './scss/main.scss';
 import Swiper from 'swiper';
   // import Swiper styles
 import 'swiper/swiper-bundle.css';
@@ -30,9 +30,6 @@ const swiper = new Swiper('.swiper-container', {
   });
 window.addEventListener('scroll', () => {
     let ScrollDistance = window.scrollY;
-
-
-
     document.querySelectorAll("section").forEach((el, i) => {
         if (el.offsetTop - document.querySelector(".header_fixed").clientHeight <= ScrollDistance - 85) {
             document.querySelectorAll(".header_nav a").forEach((el) => {
@@ -43,52 +40,49 @@ window.addEventListener('scroll', () => {
             document.querySelectorAll(".header_nav li")[i].querySelector("a").classList.add("active")
         }
     });
-
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    const prev = document.querySelector('.slider__button_left'),
-        next = document.querySelector('.slider__button_right'),
-        slides = document.querySelectorAll('.slides'),
-        Main = document.querySelector('.main'),
-        PTags = document.querySelectorAll(".tag"),
-        Hmenu = document.querySelector('.hamburger-menu'),
+    //  const prev = document.querySelector('.slider__button_left'),
+    //     next = document.querySelector('.slider__button_right'),
+    //     slides = document.querySelectorAll('.slides'),
+    //     Main = document.querySelector('.main'),
+    //     PTags = document.querySelectorAll(".tag"),
+    const Hmenu = document.querySelector('.hamburger-menu'),
         HnavMenu = document.querySelector('.header_nav');
 
-    let index = 0;
-    const activeSlide = n => {
-        for (let slide of slides) {
-            slide.classList.remove('selected');
+    // let index = 0;
+    // const activeSlide = n => {
+    //     for (let slide of slides) {
+    //         slide.classList.remove('selected');
 
-        }
-        slides[n].classList.add('selected');
-    }
+    //     }
+    //     slides[n].classList.add('selected');
+    // }
 
-    const nextSlide = () => {
-        if (index == slides.length - 1) {
-            index = 0;
-            activeSlide(index);
+    // const nextSlide = () => {
+    //     if (index == slides.length - 1) {
+    //         index = 0;
+    //         activeSlide(index);
 
-        } else {
-            index++;
-            activeSlide(index);
-        }
-    }
+    //     } else {
+    //         index++;
+    //         activeSlide(index);
+    //     }
+    // }
 
-    next.addEventListener('click', nextSlide);
+    // next.addEventListener('click', nextSlide);
 
-    const prevSlide = () => {
-        if (index == 0) {
-            index = slides.length - 1;
-            activeSlide(index);
-        } else {
-            index--;
-            activeSlide(index);
-        }
-    }
-    prev.addEventListener('click', prevSlide);
-
-
+    // const prevSlide = () => {
+    //     if (index == 0) {
+    //         index = slides.length - 1;
+    //         activeSlide(index);
+    //     } else {
+    //         index--;
+    //         activeSlide(index);
+    //     }
+    // }
+    // prev.addEventListener('click', prevSlide);
     Hmenu.onclick = function (e) {
         e.preventDefault();
         if (HnavMenu.classList.contains("header_nav_opened")) {
@@ -99,9 +93,6 @@ document.addEventListener("DOMContentLoaded", () => {
             Hmenu.classList.add("hamburger-menu_img_opened");
         }
     }
-
-
-
     function HeaderNavClose() {
         HnavMenu.classList.remove("header_nav_opened");
         HeaderModal.classList.remove("header_nav_modal_opened");

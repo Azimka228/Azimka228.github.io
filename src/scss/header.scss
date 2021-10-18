@@ -66,6 +66,7 @@ header {
             }
         }
     }
+   
     &_nav {
         &_modal {
             display: none;
@@ -77,8 +78,10 @@ header {
             top: 0px;
             left: 0;
             box-sizing: border-box;
-            &_opened {
-                display: block;
+            @media screen and (max-width:768px) {
+                &_opened {
+                    display: block;
+                }
             }
         }
         ul{
@@ -156,9 +159,9 @@ header {
                     animation-name: slidein;
                     animation-duration: 1s;
                     animation-direction: normal;     
-                    overflow: auto; 
                     transform: translateX(0px);
                     transition: transform 1s ease-in-out;
+                    overflow: hidden;
                 }
                 @keyframes slidein {
                     from {
